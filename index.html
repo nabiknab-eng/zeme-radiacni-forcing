@@ -49,9 +49,12 @@
     .diagram { max-width: 30rem; margin: 1.4rem auto; }
     .diagram img, .diagram svg { display: block; width: 100%; height: auto; }
     .diagram figcaption { margin-top: .5rem; line-height: 1.45; }
-    .uncertainty { padding: .8rem .9rem; background: var(--wash); border-left: 3px solid var(--accent); }
+    .uncertainty, .author-note { padding: .8rem .9rem; background: var(--wash); border-left: 3px solid var(--accent); }
     .uncertainty p { margin-bottom: 0; }
     .uncertainty .diagram { margin-bottom: 0; }
+    .author-note { margin-top: 1.25rem; }
+    .author-note h3 { margin-top: 0; }
+    .author-note p:last-child { margin-bottom: 0; }
     table { width: 100%; margin: 1rem 0; border-collapse: collapse; font-family: var(--sans); font-size: .91rem; }
     caption { margin-bottom: .35rem; color: var(--muted); text-align: left; }
     th, td { padding: .5rem .4rem; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
@@ -179,7 +182,14 @@
 
   <section aria-labelledby="moje-finale">
     <h2 id="moje-finale">Moje finale</h2>
-    <p><strong>Skleníkové plyny umožňují atmosféře účinně pohlcovat a vyzařovat infračervené záření. Tím jí umožňují radiačně získávat i ztrácet energii a tak měnit její teplotní pole. Zvýšení jejich koncentrace dále mění optickou tloušťku atmosféry a při nezměněném teplotním profilu mění dlouhovlnný radiační tok na TOA; např. pro zvýšení CO₂ je výsledkem kladný radiační forcing. K obnovení energetické rovnováhy na TOA se musí změnit teplotní stav systému — včetně vertikálního teplotního profilu atmosféry — tak, aby se v nové rovnováze OLR na TOA opět vyrovnalo absorbovanému slunečnímu záření.</strong></p>
+    <p>Skleníkové plyny umožňují atmosféře účinně pohlcovat a vyzařovat infračervené záření. Tím může atmosféra zářením energii získávat i ztrácet. Rozdíl mezi tím, kolik záření jednotlivé vrstvy pohltí a kolik vyzáří, přispívá k jejich ohřevu či ochlazování a ovlivňuje tak teplotní pole atmosféry.</p>
+    <p>Zvýšení koncentrace CO₂ zvětšuje optickou tloušťku atmosféry v jeho absorpčních pásmech a mění tok dlouhovlnného záření do vesmíru. Pokud se v okamžiku výpočtu změní jen koncentrace CO₂ a ostatní vlastnosti atmosféry a povrchu zůstanou stejné, je okamžité radiační působení na horní hranici atmosféry (TOA) v globálním průměru kladné. Čistý tok energie do systému Země se tím zvýší.</p>
+    <p>Při trvalém zvýšení koncentrace CO₂ se mění teplotní stav systému včetně vertikálního teplotního profilu atmosféry. Troposféra se v průměru otepluje a stratosféra se obecně ochlazuje. V nové rovnováze se odcházející dlouhovlnné záření (OLR) na horní hranici atmosféry v dlouhodobém globálním průměru opět vyrovná pohlcenému slunečnímu záření.</p>
+    <aside class="author-note" aria-labelledby="moje-dulezita-poznamka">
+      <h3 id="moje-dulezita-poznamka">Moje důležitá poznámka</h3>
+      <p><strong>Radiační výpočet a skutečná odezva Země jsou dvě různé věci.</strong> Radiační výpočet s pevným stavem atmosféry a povrchu ukazuje, jak se po zvýšení koncentrace CO₂ okamžitě změní tok záření. Ve skutečném klimatickém systému se ale energie přenáší také prouděním vzduchu a konvekcí. Při vypařování vody se energie odebírá povrchu, vodní pára ji přenáší a při kondenzaci se uvolňuje v atmosféře. V oceánu teplo přenášejí proudy a promíchávání a část přebytečné energie se v něm ukládá.</p>
+      <p>Na horní hranici atmosféry rozhoduje o energetické bilanci Země záření. Uvnitř systému ale všechny tyto procesy mění, <strong>kde a jak rychle se teplota mění</strong>. Tím ovlivňují i to, kolik tepelného záření Země následně vyzařuje do vesmíru.</p>
+    </aside>
   </section>
 </main>
 </body>
