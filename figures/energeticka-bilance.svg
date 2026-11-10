@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="474" viewBox="0 0 480 474" role="img" aria-labelledby="title description" lang="cs">
+  <title id="title">Energetická bilance Země</title>
+  <desc id="description">Při přepočtu ozáření 1 361 wattů na metr čtvereční na povrch koule vychází na horní hranici atmosféry v globálním průměru asi 340 wattů na metr čtvereční slunečního záření. Při odrazivosti 30 procent se asi 102 wattů na metr čtvereční odrazí a 238 se pohltí. V rovnováze stejných 238 wattů na metr čtvereční uniká do vesmíru jako tepelné záření.</desc>
+  <rect x="1" y="1" width="478" height="472" rx="18" fill="#f4f8f8" stroke="#d0e0e2" stroke-width="2"/>
+  <g font-family="system-ui, sans-serif" fill="#183740">
+    <text x="24" y="42" font-size="26" font-weight="700">Energetická bilance Země</text>
+    <text x="24" y="72" font-size="19" fill="#465766">Globální průměr · odrazivost 30 %</text>
+
+    <g text-anchor="middle" font-size="19" font-weight="600">
+      <text x="92" y="108" fill="#754605">Příchozí</text>
+      <text x="92" y="132" fill="#754605">sluneční</text>
+      <text x="240" y="108" fill="#754605">Odražené</text>
+      <text x="240" y="132" fill="#754605">sluneční</text>
+      <text x="388" y="108" fill="#833b3c">Odchozí</text>
+      <text x="388" y="132" fill="#833b3c">tepelné</text>
+    </g>
+    <g text-anchor="middle" font-size="20" font-weight="700">
+      <text x="92" y="161">≈ 340 W/m²</text>
+      <text x="240" y="161">≈ 102 W/m²</text>
+      <text x="388" y="161">≈ 238 W/m²</text>
+    </g>
+
+    <path d="M24 211H456" fill="none" stroke="#53787d" stroke-width="2" stroke-dasharray="7 5"/>
+    <path d="M24 211v32" stroke="#53787d" stroke-width="1.5"/>
+    <g fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M92 176V229m-11-11 11 11 11-11" stroke="#9d620f"/>
+      <path d="M240 229V176m-11 11 11-11 11 11" stroke="#9d620f"/>
+      <path d="M388 229V176m-11 11 11-11 11 11" stroke="#a24d49"/>
+    </g>
+    <text x="24" y="260" font-size="17" fill="#465766">Horní hranice</text>
+    <text x="24" y="282" font-size="17" fill="#465766">atmosféry</text>
+    <text x="388" y="260" text-anchor="middle" font-size="17" fill="#833b3c">V rovnováze</text>
+
+    <circle cx="240" cy="286" r="43" fill="#d7eeeb" stroke="#0d5c63" stroke-width="2.5"/>
+    <ellipse cx="240" cy="286" rx="22" ry="43" fill="none" stroke="#44888c" stroke-width="1.5"/>
+    <path d="M198 286h84m-77-23c23 8 47 8 70 0m-70 46c23-8 47-8 70 0" fill="none" stroke="#44888c" stroke-width="1.5"/>
+
+    <rect x="24" y="346" width="432" height="104" rx="11" fill="#e0efee"/>
+    <text x="240" y="378" text-anchor="middle" font-size="21" font-weight="700" fill="#0d5c63">Pohlceno ≈ 238 W/m²</text>
+    <text x="240" y="405" text-anchor="middle" font-size="18">Příchozí tok 1 361 ÷ 4 ≈ 340 W/m²</text>
+    <text x="240" y="430" text-anchor="middle" font-size="18">340 − 102 = 238 W/m²</text>
+  </g>
+</svg>

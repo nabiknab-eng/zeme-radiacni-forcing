@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="554" viewBox="0 0 480 554" role="img" aria-labelledby="title description" lang="cs">
+  <title id="title">Jak CO₂ mění průchod a emisi tepelného záření</title>
+  <desc id="description">Schéma znázorňuje, kolik záření z povrchu projde přímo do vesmíru v okolí 15 mikrometrů. Při vyšší koncentraci CO₂ projde méně záření zejména na okrajích pásu. Ve středu pásu je přímý průchod už velmi malý. Atmosféra zároveň vyzařuje vzhůru i dolů. Příspěvek vrstev k záření do vesmíru se s vlnovou délkou a množstvím CO₂ mění.</desc>
+  <rect x="1" y="1" width="478" height="552" rx="18" fill="#f4f8f8" stroke="#d0e0e2" stroke-width="2"/>
+  <g font-family="system-ui, sans-serif" fill="#183740">
+    <text x="24" y="42" font-size="26" font-weight="700">CO₂ a tepelné záření</text>
+    <text x="24" y="72" font-size="19" fill="#465766">Přímý průchod z povrchu do vesmíru</text>
+
+    <path d="M25 107h26" fill="none" stroke="#596a77" stroke-width="4" stroke-dasharray="6 4"/>
+    <text x="60" y="114" font-size="18">Méně CO₂</text>
+    <path d="M248 107h26" fill="none" stroke="#0d5c63" stroke-width="4"/>
+    <text x="283" y="114" font-size="18">Více CO₂</text>
+
+    <rect x="24" y="134" width="432" height="148" rx="10" fill="#fff" stroke="#d0e0e2"/>
+    <path d="M31 169C107 169 129 177 163 213S204 263 240 263 284 250 317 213 373 169 449 169
+             C407 169 366 176 349 211S302 263 240 263 151 248 131 211 73 169 31 169Z" fill="#cde6e3"/>
+    <path d="M240 139V279" stroke="#b6c7ce" stroke-width="1.5" stroke-dasharray="4 4"/>
+    <path d="M31 169C107 169 129 177 163 213S204 263 240 263 284 250 317 213 373 169 449 169" fill="none" stroke="#596a77" stroke-width="3.5" stroke-dasharray="7 5"/>
+    <path d="M31 169C73 169 114 176 131 211S178 263 240 263 329 248 349 211 407 169 449 169" fill="none" stroke="#0d5c63" stroke-width="3.5"/>
+    <text x="45" y="158" font-size="16" fill="#465766">Větší průchod</text>
+    <text x="45" y="272" font-size="16" fill="#465766">Menší průchod</text>
+    <g text-anchor="middle" font-size="18">
+      <text x="90" y="309" fill="#465766">Okraj pásu</text>
+      <text x="240" y="309" font-weight="700">≈ 15 μm</text>
+      <text x="390" y="309" fill="#465766">Okraj pásu</text>
+    </g>
+
+    <text x="240" y="341" text-anchor="middle" font-size="18" font-weight="600" fill="#0d5c63">Více CO₂ zvětšuje optickou tloušťku</text>
+
+    <rect x="24" y="365" width="432" height="141" rx="11" fill="#e0efee"/>
+    <text x="43" y="397" font-size="21" font-weight="700" fill="#0d5c63">Atmosféra také vyzařuje</text>
+    <g transform="translate(0 33)" fill="none" stroke="#0d5c63" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M81 408v-22m-7 7 7-7 7 7m-7 38v22m-7-7 7 7 7-7"/>
+      <path d="M69 420H51m6-6-6 6 6 6m36-6h18m-6-6 6 6-6 6"/>
+    </g>
+    <circle cx="81" cy="453" r="6" fill="#0d5c63"/>
+    <text x="129" y="433" font-size="18">Záření míří do všech směrů.</text>
+    <text x="129" y="458" font-size="18">Více CO₂ mění příspěvek vrstev.</text>
+    <text x="129" y="483" font-size="18">Záleží na vlnové délce a teplotě.</text>
+
+    <text x="240" y="534" text-anchor="middle" font-size="17" fill="#465766">Ilustrační průběhy bez datové stupnice</text>
+  </g>
+</svg>
