@@ -91,13 +91,16 @@
     <p>Horní hranici atmosféry budeme značit <strong>TOA</strong> (z anglického <i lang="en">top of atmosphere</i>). Tady můžeme sečíst, co Země s atmosférou dostává a co odevzdává. Pohlcené sluneční záření označíme ASR a odcházející dlouhovlnné záření OLR. Když je čistý tok <var>N</var> kladný, Země energii získává. V rovnováze je <var>N</var> v dlouhodobém průměru nula.</p>
     <p class="equation"><var>N</var> = ASR − OLR</p>
     <p>Jakou teplotu by muselo mít černé těleso, aby vyzařovalo 238 W/m²? Vyjde přibližně <strong>255 K</strong>. To je <strong>efektivní vyzařovací teplota</strong>, která shrnuje vyzařování celé Země do jediného čísla. Pokud bychom v myšlenkovém příkladu vypnuli i odraz, vyšlo by asi <strong>278 K</strong>. Pro dokonale průhlednou atmosféru, která si s povrchem nevyměňuje teplo, bilance určuje vyzařování povrchu. Teplotní profil takového plynu zůstává neurčený.</p>
+    <p>Efektivní teplota <var>T</var><sub>e</sub> není obecně aritmetickým průměrem teplot. Ani pro černý nehomogenní povrch neplatí ⟨<var>T</var><sup>4</sup>⟩ = ⟨<var>T</var>⟩<sup>4</sup>. Hodnota kolem 255 K proto sama neurčuje průměrnou teplotu přízemního vzduchu ani rozdělení teplot mezi den a noc.</p>
     <p class="sources"><a href="https://doi.org/10.1029/2010GL045777">Kopp a Lean (2011) · měření slunečního ozáření</a><br><a href="https://doi.org/10.1175/JCLI-D-17-0208.1">Loeb a kol. (2018) · družicová bilance CERES</a></p>
   </section>
 
   <section aria-labelledby="pusobeni">
     <h2 id="pusobeni">Co změní víc CO₂?</h2>
     <p>Povrch vyzařuje tepelné záření. Vrstvy atmosféry část záření pohltí a samy také vyzařují, směrem k povrchu i do vesmíru. Vrstva se může radiačně ohřívat nebo ochlazovat podle toho, zda v součtu víc záření pohltí, nebo vyzáří. Účinek CO₂ na dlouhovlnný tok proto závisí i na teplotách jednotlivých vrstev.</p>
+    <details><summary>Fyzikální detail: absorpce a emise</summary><p class="equation">d<var>I</var><sub>ν</sub>/d<var>s</var> = κ<sub>ν</sub>[<var>B</var><sub>ν</sub>(<var>T</var>) − <var>I</var><sub>ν</sub>]</p><p>Rovnice předpokládá místní termodynamickou rovnováhu a zanedbává rozptyl tepelného záření. κ<sub>ν</sub> je absorpční koeficient na jednotku délky; <var>B</var><sub>ν</sub>(<var>T</var>) popisuje tepelnou emisi. Stejný plyn záření pohlcuje i vyzařuje. Tok ve W/m² dostaneme až integrací intenzity přes směry a spektrum.</p></details>
     <p>Molekuly CO₂ pohlcují a vyzařují zvlášť účinně kolem vlnové délky <strong>15 μm</strong>. Více CO₂ zvětší optickou tloušťku v tomto pásu. Střed pásu je už velmi neprůhledný, takže velká část dodatečného účinku se projeví na jeho okrajích. Změní se i to, z jakých výšek a teplot záření při různých vlnových délkách dosáhne vesmíru.</p>
+    <p>Optická tloušťka je τ<sub>ν</sub> = ∫κ<sub>ν</sub> d<var>s</var>. Pro přímý paprsek bez emise platí <var>I</var><sub>ν,trans</sub> = <var>I</var><sub>ν,0</sub> exp(−τ<sub>ν</sub>); tato rovnice sama nepopisuje celé OLR. Exponenciální zeslabení přímého paprsku není totéž co přibližně logaritmická závislost celkového radiačního působení na CO₂. Ta zahrnuje spektrum, teplotní profil i emisi atmosféry. Koeficient 5,35 W/m² je parametr konkrétní aproximace, nikoli univerzální konstanta.</p>
 
     <figure class="diagram">
       <img src="figures/spektralni-prenos.svg" width="480" height="554" loading="lazy" alt="Při vyšší koncentraci CO₂ projde z povrchu přímo do vesmíru méně tepelného záření zejména na okrajích pásu kolem 15 μm. Atmosféra sama vyzařuje ve všech směrech a příspěvek vrstev se mění.">
@@ -108,6 +111,7 @@
     <p>Myšlenkově můžeme udělat dva výpočty. Nejdřív změníme koncentraci CO₂ a necháme stav atmosféry i povrchu pevný. Rozdíl čistých toků na TOA je <strong>okamžité radiační působení</strong> (IRF). Účinek CO₂ je převážně dlouhovlnný, ale CO₂ pohlcuje i část slunečního záření v blízké infračervené oblasti. Pak necháme teplotu stratosféry přizpůsobit při pevném stavu troposféry a povrchu. Tím dostaneme <strong>radiační působení po přizpůsobení stratosféry</strong> (SARF).</p>
     <p>Pro jednoduchý výpočet použijeme klasickou aproximaci Myhreho a kol. Autoři proložili logaritmický vztah výsledky podrobných výpočtů přenosu záření. U tropopauzy po přizpůsobení stratosféry vychází pro zdvojnásobení přibližně <strong>+3,7 W/m²</strong>. Je to kladný příspěvek do energetické bilance Země.</p>
     <p class="equation"><var>F</var> ≈ 5,35 × ln(<var>C</var>/<var>C</var><sub>0</sub>) W/m²<br>Při <var>C</var> = 2<var>C</var><sub>0</sub>: <var>F</var> ≈ 5,35 × ln(2) W/m² ≈ 3,71 W/m²</p>
+    <p>Následující výpočet je ilustrací se zvoleným SARF. Při přesnějším odhadu musíme sladit definici vstupního působení s tím, které rychlé úpravy a teplotní odezvy už zahrnují parametry modelu. Hodnoty IRF, SARF a účinného radiačního působení (ERF) nelze zaměňovat bez této kontroly.</p>
     <p class="sources"><a href="https://doi.org/10.1175/JCLI-D-25-0233.1">Czarnecki a kol. (2025) · optická tloušťka a okamžité působení</a><br><a href="https://doi.org/10.1029/98GL01908">Myhre a kol. (1998), tabulka 3 · logaritmická aproximace</a><br><a href="https://doi.org/10.1002/2016GL071930">Etminan a kol. (2016) · dlouhovlnná a krátkovlnná složka</a></p>
   </section>
 
@@ -115,13 +119,15 @@
     <h2 id="planck">Planckova odezva ve zjednodušeném modelu</h2>
     <p>Co může kladnou nerovnováhu vyrovnat? Teplejší těleso vyzařuje víc energie. Pro černé těleso platí Stefanův–Boltzmannův zákon. Když jej zderivujeme při 255 K, dostaneme změnu vyzařování na jeden kelvin.</p>
     <p class="equation">Vyzařovaný tok = <var>σT</var><sup>4</sup><br>Sklon při 255 K: 4<var>σT</var><sup>3</sup> ≈ <span class="quantity">3,76 W·m⁻²·K⁻¹</span></p>
-    <p>V tomto středoškolském příkladu vyrovná 3,7 W/m² zvýšení <strong>efektivní vyzařovací teploty</strong> přibližně o <strong>1 K</strong>. Skutečná Země vyzařuje z různých výšek a teplot. Pro rovnoměrné oteplení povrchu a troposféry ukazují výpočty Sodena a Helda Planckovu odezvu kolem <strong>−3,2 W·m⁻²·K⁻¹</strong> v bilanci čistého toku. Se stejným vstupem 3,7 W/m² a se samotnou Planckovou odezvou by vyšlo přibližně <strong>1,2 °C</strong> oteplení povrchu.</p>
+    <p>Derivace při 255 K říká, že zvýšení černotělesného vyzařování o 3,7 W/m² odpovídá přibližně 1 K. Tento převod sám neurčuje oteplení povrchu po zvýšení CO₂. Pokud zůstane pohlcené sluneční záření stejné, v konečné rovnováze se OLR i z něj definovaná efektivní teplota vrátí na původní hodnotu; změnit se může teplota povrchu i vertikální teplotní profil. Pro rovnoměrné oteplení povrchu a troposféry ukazují výpočty Sodena a Helda Planckovu odezvu kolem <strong>−3,2 W·m⁻²·K⁻¹</strong> v bilanci čistého toku. Se vstupem 3,7 W/m² a se samotnou Planckovou odezvou by vyšlo přibližně <strong>1,2 °C</strong> oteplení povrchu.</p>
     <p class="sources"><a href="https://doi.org/10.1175/JCLI3799.1">Soden a Held (2006), oddíl 3 · výpočty radiační odezvy</a></p>
   </section>
 
   <section aria-labelledby="zpetne-vazby">
-    <h2 id="zpetne-vazby">Další zpětné vazby bez oblak</h2>
+    <h2 id="zpetne-vazby">Další zpětné vazby bez zahrnutí změn oblačnosti</h2>
     <p>Za základ vezmeme Planckovu odezvu a vstup <var>F</var> = 3,71 W/m². Vodní páru a změnu průběhu teploty s výškou počítáme dohromady, protože spolu souvisejí. Když přidáme i změnu odrazivosti povrchu, například při úbytku sněhu a ledu, součet radiačních odezev se znovu změní. Přibližné hodnoty pro tento příklad bereme z původního porovnání modelů Sodena a Helda.</p>
+    <p>Vynecháváme příspěvek změn oblačnosti k radiační odezvě; nepočítáme Zemi s odstraněnými oblaky. Číselné koeficienty pocházejí z rozkladu konkrétního souboru modelových změn. Základní zákony vysvětlují mechanismy, ale neurčují samy jejich globální hodnoty; ty závisejí například na rozložení oteplení, vlhkosti a výškového teplotního profilu.</p>
+    <p class="equation"><var>N</var>′ ≈ <var>F</var> + <var>α</var> Δ<var>T</var><sub>s</sub></p><p>Pro rovnováhu linearizovaného modelu položíme <var>N</var>′ = 0 a dostaneme Δ<var>T</var><sub>s</sub> ≈ −<var>F</var>/<var>α</var>. Stabilizující součet odezev má v této znaménkové konvenci <var>α</var> &lt; 0. Během přechodu do rovnováhy je <var>N</var>′ zpravidla nenulové a část energie se ukládá, zejména v oceánu. Tabulka neurčuje rychlost oteplení.</p>
 
     <table>
       <caption>Ilustrační výpočet se stejným vstupem 3,71 W/m²</caption>
@@ -158,6 +164,7 @@
     <p>Oblaka část slunečního záření odrážejí a zároveň ovlivňují, kolik tepelného záření uniká do vesmíru. Při oteplení se může měnit jejich množství, výška i odrazivost. Jde o to, jak se tyto změny projeví v čisté globální bilanci.</p>
     <div class="uncertainty">
       <p>Centrální odhad čisté zpětné vazby oblačnosti je <strong>+0,42 W·m⁻²·K⁻¹</strong>. Velmi pravděpodobné rozmezí je <strong>−0,10 až +0,94 W·m⁻²·K⁻¹</strong>. <strong>Interval nejistoty obsahuje nulu a jeho dolní mez připouští zápornou zpětnou vazbu.</strong> Záporná hodnota by oteplování tlumila, kladná by ho zesilovala.</p>
+      <p>Samotné meze intervalu neříkají, že všechny hodnoty uvnitř jsou stejně pravděpodobné ani že kladné a záporné znaménko mají stejnou pravděpodobnost. Graf zobrazuje meze nejistoty, nikoli hustotu pravděpodobnosti.</p>
       <figure class="diagram">
         <svg viewBox="0 0 440 126" role="img" aria-labelledby="cloud-fig-title cloud-fig-desc" xmlns="http://www.w3.org/2000/svg">
           <title id="cloud-fig-title">Rozmezí čisté zpětné vazby oblačnosti</title>
@@ -183,13 +190,14 @@
   <section aria-labelledby="moje-finale">
     <h2 id="moje-finale">Moje finale</h2>
     <p>Skleníkové plyny umožňují atmosféře účinně pohlcovat a vyzařovat infračervené záření. Tím může atmosféra zářením energii získávat i ztrácet. Rozdíl mezi tím, kolik záření jednotlivé vrstvy pohltí a kolik vyzáří, přispívá k jejich ohřevu či ochlazování a ovlivňuje tak teplotní pole atmosféry.</p>
-    <p>Zvýšení koncentrace CO₂ zvětšuje optickou tloušťku atmosféry v jeho absorpčních pásmech a mění tok dlouhovlnného záření do vesmíru. Pokud se v okamžiku výpočtu změní jen koncentrace CO₂ a ostatní vlastnosti atmosféry a povrchu zůstanou stejné, je okamžité radiační působení na horní hranici atmosféry (TOA) v globálním průměru kladné. Čistý tok energie do systému Země se tím zvýší.</p>
-    <p>Při trvalém zvýšení koncentrace CO₂ se mění teplotní stav systému včetně vertikálního teplotního profilu atmosféry. Troposféra se v průměru otepluje a stratosféra se obecně ochlazuje. V nové rovnováze se odcházející dlouhovlnné záření (OLR) na horní hranici atmosféry v dlouhodobém globálním průměru opět vyrovná pohlcenému slunečnímu záření.</p>
+    <p>Zvýšení koncentrace CO₂ zvětšuje optickou tloušťku atmosféry v jeho absorpčních pásmech a mění tok dlouhovlnného záření do vesmíru. Pokud se v okamžiku výpočtu změní jen koncentrace CO₂ a ostatní vlastnosti atmosféry a povrchu zůstanou stejné, je okamžité radiační působení na horní hranici atmosféry (TOA) v globálním průměru pro současné pozemské podmínky kladné. Čistý tok energie do systému Země se tím zvýší.</p>
+    <p>Při jinak nezměněném vnějším působení se po trvalém zvýšení koncentrace CO₂ mění teplotní stav systému včetně vertikálního teplotního profilu atmosféry. Troposféra se v průměru otepluje a stratosféra se obecně ochlazuje. V nové rovnováze se odcházející dlouhovlnné záření (OLR) na horní hranici atmosféry v dlouhodobém globálním průměru opět vyrovná pohlcenému slunečnímu záření.</p>
     <aside class="author-note" aria-labelledby="moje-dulezita-poznamka">
       <h3 id="moje-dulezita-poznamka">Moje důležitá poznámka</h3>
       <p><strong>Radiační výpočet a skutečná odezva Země jsou dvě různé věci.</strong> Radiační výpočet s pevným stavem atmosféry a povrchu ukazuje, jak se po zvýšení koncentrace CO₂ okamžitě změní tok záření. Ve skutečném klimatickém systému se ale energie přenáší také prouděním vzduchu a konvekcí. Při vypařování vody se energie odebírá povrchu, vodní pára ji přenáší a při kondenzaci se uvolňuje v atmosféře. V oceánu teplo přenášejí proudy a promíchávání a část přebytečné energie se v něm ukládá.</p>
       <p>Na horní hranici atmosféry rozhoduje o energetické bilanci Země záření. Uvnitř systému ale všechny tyto procesy mění, <strong>kde a jak rychle se teplota mění</strong>. Tím ovlivňují i to, kolik tepelného záření Země následně vyzařuje do vesmíru.</p>
     </aside>
+    <p>Proudění, konvekce, přenos skupenského tepla a oceánské mísení mohou ovlivnit nejen rychlost přechodu, ale i výsledné rozložení teplot, vlhkosti a oblaků. Tím mění radiační toky. Samotný radiační výpočet s pevným stavem tyto změny neurčuje; model, který řeší také proudění a přenos tepla, je může zahrnovat. Platnost či přesnost takového modelu je nutné posuzovat podle jeho rovnic, aproximací a výsledků.</p>
   </section>
 </main>
 </body>
